@@ -1,6 +1,11 @@
+//import
 @import '_mixin';
 @import '_var';
 
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+//end import
+
+//global
 * {
   padding: 0;
   margin: 0;
@@ -8,17 +13,43 @@
   list-style: none;
   box-sizing: border-box;
   color: $main-text-color;
+  font-family: 'Roboto', sans-serif;
 }
+
+html{
+  font-size: 16px;
+}
+//end global
 
 body {
-  background: black url("../img/bgc.png");
+  background: $background-color url("../img/bgc.png");
 }
 
+.side-text {
+  opacity: 0.4;
+}
+//header
 .header {
+  background-image: url("../img/main-screen__bgc.png");
+  background-position: right;
+  background-repeat: no-repeat;
   &__top {
     display: flex;
     justify-content: space-between;
     padding-top: 40px;
+    margin: 0 $margin-lateral-special;
+  }
+  &__middle {
+    margin: 6.1% $margin-lateral 0 $margin-lateral;
+  }
+  &__bottom {
+    background-color: $background-color-side;
+    padding: 36px $margin-lateral;
+    margin-top: 218px;
+  }
+  &__h{
+    font-size: 4rem;
+    white-space: pre-line;
   }
 }
 
@@ -29,6 +60,7 @@ body {
 
 .menu{
   @include flex-center ();
+  margin-left: 11%;
   &__ul {
     @include flex-center ();
   }
@@ -39,6 +71,9 @@ body {
   &__link {
     color: white;
     padding: 5px 0;
+    font-size: 16px;
+    line-height: 150%;
+    text-align: center;
     @include flex-center ();
     transition: 0.8s;
       &:hover {
@@ -58,14 +93,47 @@ body {
   width: 183px;
   height: 44px;
   transition: 1s;
-  -webkit-touch-callout: none;
-  -webkit-user-select: none;
-  -khtml-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
+  @include no-pointer();
+  &_bottom {
+    background: linear-gradient(94.78deg, #DF5950 11.19%, #451046 93.72%);
+  }
   &:hover {
       background: $main-text-color;
      color: $attention-text-color;
    }
 }
+
+.timer {
+  margin-top: 5%;
+  display: flex;
+  &__block {
+    @include flex-center();
+    flex-direction: column;
+    background-color: $background-color-side;
+    width: 102px;
+    height: 112px;
+    margin-right: 30px;
+    @include no-pointer();
+  }
+  &__number {
+    font-size: 2.25rem;
+    font-weight: bold;
+  }
+}
+
+.student-earnings {
+
+  &__meter {
+    width: 30%;
+    height: 6px;
+    background-color: white;
+    display: inline-block;
+    position: relative;
+    &_full {
+      background: linear-gradient(94.78deg, #DF5950 11.19%, #451046 93.72%);
+      position: absolute;
+      width: 0;
+    }
+  }
+}
+//end header

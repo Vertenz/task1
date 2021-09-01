@@ -8,52 +8,65 @@
     <title>Компьютерная сборка</title>
 </head>
 <body>
-    <header class="header" id="header">
-        <div class="header__top">
-            <a href="#header"><img src="img/logo.svg" alt="Name" class="logo"></a>
-            <nav class="menu">
-                <ul class="menu__ul">
-                    <li class="menu__li"><a href="#" class="menu__link">Главна</a></li>
-                    <li class="menu__li"><a href="#" class="menu__link">Курсы</a></li>
-                    <li class="menu__li"><a href="#" class="menu__link">Расписание</a></li>
-                    <li class="menu__li"><a href="#" class="menu__link">Преподаватели</a></li>
-                    <li class="menu__li"><a href="#" class="menu__link">Рассылка</a></li>
-                    <li class="menu__li"><a href="#" class="menu__link">Контакты</a></li>
-                </ul>
-            </nav>
-            <div class="btn" id="logIn">Зайти в кабинет</div>
-        </div>
-        <div class="header__middle">
-            <h1 class="header__h">
-                Первый курс
-                <br>
-                по компьютерной сборке
-            </h1>
-            <div class="timer">
-                <div class="timer__block">
-                    <div class="timer__number" id="day"></div>
-                    <div class="timer__name">Дней</div>
-                </div>
+<header class="header" id="header">
+    <div class="header__top">
+        <a href="#header"><img src="img/logo.svg" alt="Name" class="logo"></a>
+        <nav class="menu">
+            <ul class="menu__ul">
+                <li class="menu__li"><a href="#" class="menu__link">Главна</a></li>
+                <li class="menu__li"><a href="#" class="menu__link">Курсы</a></li>
+                <li class="menu__li"><a href="#" class="menu__link">Расписание</a></li>
+                <li class="menu__li"><a href="#" class="menu__link">Преподаватели</a></li>
+                <li class="menu__li"><a href="#" class="menu__link">Рассылка</a></li>
+                <li class="menu__li"><a href="#" class="menu__link">Контакты</a></li>
+            </ul>
+        </nav>
+        <div class="btn" id="logIn">Зайти в кабинет</div>
+    </div>
+    <div class="header__middle">
+        <h1 class="header__h">
+            Первый курс
+            по компьютерной сборке
+        </h1>
+        <div class="timer">
+            <div class="timer__block">
+                <div class="timer__number" id="day"></div>
+                <div class="timer__name">Дней</div>
             </div>
-            <div class="timer">
-                <div class="timer__block">
-                    <div class="timer__number" id="hour"></div>
-                    <div class="timer__name">Часов</div>
-                </div>
+            <div class="timer__block">
+                <div class="timer__number" id="hour"></div>
+                <div class="timer__name">Часов</div>
             </div>
-            <div class="timer">
-                <div class="timer__block">
-                    <div class="timer__number" id="minutes"></div>
-                    <div class="timer__name">Минут</div>
-                </div>
+            <div class="timer__block">
+                <div class="timer__number" id="minutes"></div>
+                <div class="timer__name">Минут</div>
             </div>
-            <div class="timer">
-                <div class="timer__block">
-                    <div class="timer__number" id="second"></div>
-                    <div class="timer__name">Секунд</div>
-                </div>
+            <div class="timer__block">
+                <div class="timer__number" id="second"></div>
+                <div class="timer__name">Секунд</div>
             </div>
         </div>
-    </header>
+    </div>
+    <div class="header__bottom">
+        <div class="btn btn_bottom">Заказать курс</div>
+        <div class="student-block">
+            <div class="student-block__line">
+                <span class="side-text">Учеников всего</span> <span id="student-counter"></span>
+            </div>
+            <div class="student-block__line">
+                <span class="side-text">Успешно закончили курс:</span> <span id="graduate-counter"></span>
+            </div>
+        </div>
+        <div class="student-earnings">
+            <div class="student-earnings__top">
+                <span class="side-text">Заработано учениками:</span>
+                <span id="students-salary"></span>
+            </div>
+            <div class="student-earnings__meter">
+                <div class="student-earnings__meter student-earnings__meter_full" id="student-earnings__meter_full"></div>
+            </div>
+        </div>
+    </div>
+</header>
 </body>
 </html>

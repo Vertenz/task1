@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
 * {
   padding: 0;
   margin: 0;
@@ -5,16 +6,43 @@
   list-style: none;
   box-sizing: border-box;
   color: #fff;
+  font-family: "Roboto", sans-serif;
+}
+
+html {
+  font-size: 16px;
 }
 
 body {
   background: black url("../img/bgc.png");
 }
 
+.side-text {
+  opacity: 0.4;
+}
+
+.header {
+  background-image: url("../img/main-screen__bgc.png");
+  background-position: right;
+  background-repeat: no-repeat;
+}
 .header__top {
   display: flex;
   justify-content: space-between;
   padding-top: 40px;
+  margin: 0 4.3%;
+}
+.header__middle {
+  margin: 6.1% 16.5% 0 16.5%;
+}
+.header__bottom {
+  background-color: #121212;
+  padding: 36px 16.5%;
+  margin-top: 218px;
+}
+.header__h {
+  font-size: 4rem;
+  white-space: pre-line;
 }
 
 .logo {
@@ -26,6 +54,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-left: 11%;
 }
 .menu__ul {
   display: flex;
@@ -41,6 +70,9 @@ body {
 .menu__link {
   color: white;
   padding: 5px 0;
+  font-size: 16px;
+  line-height: 150%;
+  text-align: center;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -68,9 +100,50 @@ body {
   -ms-user-select: none;
   user-select: none;
 }
+.btn_bottom {
+  background: linear-gradient(94.78deg, #DF5950 11.19%, #451046 93.72%);
+}
 .btn:hover {
   background: #fff;
   color: #C89AFC;
+}
+
+.timer {
+  margin-top: 5%;
+  display: flex;
+}
+.timer__block {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: #121212;
+  width: 102px;
+  height: 112px;
+  margin-right: 30px;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.timer__number {
+  font-size: 2.25rem;
+  font-weight: bold;
+}
+
+.student-earnings__meter {
+  width: 30%;
+  height: 6px;
+  background-color: white;
+  display: inline-block;
+  position: relative;
+}
+.student-earnings__meter_full {
+  background: linear-gradient(94.78deg, #DF5950 11.19%, #451046 93.72%);
+  position: absolute;
+  width: 0;
 }
 
 /*# sourceMappingURL=main.css.map */

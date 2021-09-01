@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", () => {
+    document.addEventListener("DOMContentLoaded", () => {
     const dayBlock = document.getElementById('day');
     const hourBlock = document.getElementById('hour');
     const minuteBlock = document.getElementById('minutes');
