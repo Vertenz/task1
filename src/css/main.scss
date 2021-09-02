@@ -43,6 +43,8 @@ body {
     margin: 6.1% $margin-lateral 0 $margin-lateral;
   }
   &__bottom {
+    display: flex;
+    justify-content: space-between;
     background-color: $background-color-side;
     padding: 36px $margin-lateral;
     margin-top: 218px;
@@ -122,18 +124,67 @@ body {
 }
 
 .student-earnings {
-
   &__meter {
-    width: 30%;
+    width: 18em;
     height: 6px;
     background-color: white;
     display: inline-block;
     position: relative;
+    &::before {
+      content: '0';
+      position: absolute;
+      opacity: 0.4;
+      margin-top: 7px;
+    }
+    &::after {
+      content: '1000000₽';
+      position: absolute;
+      margin-left: 14em;
+      opacity: 0.4;
+      margin-top: 7px;
+    }
     &_full {
       background: linear-gradient(94.78deg, #DF5950 11.19%, #451046 93.72%);
       position: absolute;
       width: 0;
+      &::before {
+        content: '';
+      }
+      &::after {
+        content: '';
+      }
     }
   }
 }
-//end header
+//end
+
+//about
+.about {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 200px $margin-lateral 0 $margin-lateral;
+}
+.image-block {
+  width: 30em;
+  height: 28em;
+  border: 15px solid;
+  border-image: linear-gradient(94.26deg, #C89AFC 9.51%, #7C6AFA 90.23%) 1;
+  position: relative;
+  &__img {
+    position: absolute;
+    top: 11%;
+    background-image: url("../img/image.png");
+  }
+}
+.about-text {
+  width: 32rem;
+  margin-left: 5%;
+  &__h {
+    font-size: 3rem;
+  }
+  &__text {
+    margin-top: 45px;
+  }
+}
+//
