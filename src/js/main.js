@@ -3,10 +3,12 @@
     const hourBlock = document.getElementById('hour');
     const minuteBlock = document.getElementById('minutes');
     const secondBlock = document.getElementById('second');
+    const yearEl = document.getElementById('year');
 
     let time = null;
 
     let dayEnd = new Date();
+    yearEl.innerHTML = dayEnd.getFullYear()
     dayEnd = +dayEnd + 8.64e7;
     if (time === null) {
         setInterval(() => {
@@ -26,6 +28,6 @@
             secondBlock.innerHTML = secondLeft;
         }, 1000)
     }else {
-        //TODO только сек и мин
+        //TD только сек и мин
     }
 });
