@@ -295,9 +295,13 @@ body {
     top: 11%;
     width: 446px;
     height: 446px;
+    @media (max-width: 550px) {
+      width: 346px;
+      height: 346px;
+    }
     @media (max-width: 420px) {
       width: 271px;
-      height: 327px;
+      height: 290px;
     }
   }
 }
