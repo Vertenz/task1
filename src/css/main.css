@@ -329,10 +329,16 @@ body {
   width: 446px;
   height: 446px;
 }
+@media (max-width: 550px) {
+  .image-block__img {
+    width: 346px;
+    height: 346px;
+  }
+}
 @media (max-width: 420px) {
   .image-block__img {
     width: 271px;
-    height: 327px;
+    height: 290px;
   }
 }
 
